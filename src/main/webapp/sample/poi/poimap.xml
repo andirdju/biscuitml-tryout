@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page title="POI Map" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:noNamespaceSchemaLocation="http://www.netbiscuits.com/schema/netbiscuits.xsd">
+  <styles>
+    <style name="color" value="#777777"/>
+    <style name="link-color" value="#000000"/>
+    <style name="border-color" value="#CCCCCC"/>
+    <style name="header-color" value="#dddddd"/>
+    <style name="header-bgcolor" value="#d90000"/>
+  </styles>
+  <container>
+    <column>
+      <TEXT>
+        <headline>POI Map</headline>
+      </TEXT>
+      <MAP>
+        <styles>
+          <style name="text-align" value="center"/>
+        </styles>
+        <mapparams provider="google">
+          <key>your_google_api_key</key>
+        <maptype>mobile</maptype>
+        <zoom>10</zoom>
+      </mapparams>
+      <mapnavigation position="bottom"/>
+      </MAP>
+    <TEASER borders="top">
+      <link href="index.xml">&#187; new search</link>
+    </TEASER>
+    <SEPARATOR/>
+    <PAGEFOOTER>
+      <styles>
+        <style name="link-color" value="#FFFFFF"/>
+        <style name="bgcolor" value="#D90000"/>
+      </styles>
+      <text href="index.xml">powered by Netbiscuits</text>
+    </PAGEFOOTER>
+  </column>
+</container>
+</page>

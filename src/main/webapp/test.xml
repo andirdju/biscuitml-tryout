@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page output-encoding="UTF-8" baseurl="http://nb.andird.org" title="Netbiscuits"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.netbiscuits.com/schema/netbiscuits.xsd">
+	<script>
+		<function name="toggleTable1">
+			<action name="toggle">
+				<param name="id" value="table-1" />
+			</action>
+		</function>
+		<function name="hideTable1">
+			<action name="hide">
+				<param name="id" value="table-1" />
+			</action>
+		</function>
+		<event type="onclick" id="row-1-id">
+			<call function="toggleTable1"/>
+		</event>
+		<event type="onclick" id="row-2-id">
+			<action name="toggle">
+				<param name="id" value="table-2" />
+			</action>
+		</event>
+		<event type="onload">
+			<call function="hideTable1"/>
+			<action name="hide">
+				<param name="id" value="table-2" />
+			</action>
+		</event>
+	</script>
+	<container>
+		<column>
+			<TABLE>
+				<row id="row-1-id">
+					<cell borders="all">
+						<richtext>
+							Row 1: click to toggle table 1
+						</richtext>
+					</cell>
+				</row>
+			</TABLE>
+			<SEPARATOR></SEPARATOR>
+			<TABLE id="table-1">
+				<row>
+					<cell borders="all">
+						<richtext>
+							Table 1:toggled by Row 1
+						</richtext>
+					</cell>
+				</row>
+			</TABLE>
+			<SEPARATOR></SEPARATOR>
+			<TABLE>
+				<row id="row-2-id">
+					<cell borders="all">
+						<richtext>
+							Row 2: click to toggle table 2
+						</richtext>
+					</cell>
+				</row>
+			</TABLE>
+			<SEPARATOR></SEPARATOR>
+			<TABLE id="table-2">
+				<row>
+					<cell borders="all">
+						<richtext>
+							Table 2:toggled by Row 2
+						</richtext>
+					</cell>
+				</row>
+			</TABLE>
+		</column>
+	</container>
+</page>

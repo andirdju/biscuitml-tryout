@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page xmlns:nb="http://www.emoveo.de/netbiscuits" title="Netbiscuits">
+	
+	  <container>
+		    <column>
+			      <IMAGEHEADER fillcolor="D90000" boxing="3">
+            <styles>
+					          <style name="bgcolor" value="#D90000"/>
+				        </styles>
+            <img src="./res/generic-header-image.jpg" href="index.xml" alt="home"/>
+         </IMAGEHEADER>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <ARTICLE>
+            <headline>Thank you!</headline>
+            <richtext>[br]Text: Your confirmation! Let the customer know that you received his input.</richtext>
+            <richtext>[br][br]Give additional information, e.g. on what the customer will receive, how often the advertiser will contact him and how the customer can unsubscribe from the advertisers contact list. 
+</richtext>
+            <link href="landing-page-sms.xml">
+					...go back</link>
+         </ARTICLE>
+			      <SEPARATOR/>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <PAGEFOOTER>
+            <item position="2">
+					          <richtext>[b]copyright info[/b]</richtext>
+				        </item>
+         </PAGEFOOTER>
+		    </column>
+	  </container>
+	
+</page>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page title="POI Finder" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:noNamespaceSchemaLocation="http://www.netbiscuits.com/schema/netbiscuits.xsd">
+  <styles>
+    <style name="link-color" value="#000000"/>
+    <style name="border-color" value="#CCCCCC"/>
+    <style name="header-color" value="#DDDDDD"/>
+    <style name="header-bgcolor" value="#D90000"/>
+  </styles>
+  <class name="poihead">
+    <style name="link-color" value="#D90000"/>
+    <style name="bgcolor" value="#DDDDDD"/>
+  </class>
+  <class name="poilabel">
+    <style name="color" value="#777777"/>
+  </class>
+  <class name="poitext">
+    <style name="color" value="#777777"/>
+    <style name="text-align" value="justify"/>
+  </class>
+  <container>
+    <column>
+      <FORM action="index.xml" method="get">
+        <headline>POI Demo</headline>
+        <text>[color="D90000"][b][i]Alternative Setup; all biscuits on one page[/i][/b][/color][br][br]</text>
+        <input type="hidden" name="poilistId" value="1122"/>
+        <text>Your location:</text>
+        <input type="textarea" name="poiAddress" value=""/>
+        <row>
+          <cell>
+            <text>Count:</text>
+            <input type="text" size="3" name="poiMaxItems" value=""/>
+          </cell>
+          <cell>
+            <text>Distance:</text>
+            <input type="text" size="4" name="poiDistance" value=""/>
+          </cell>
+          <cell>
+            <text>Unit:</text>
+            <input type="select" name="poiUnit">
+              <option value="">---</option>
+              <option value="km">km</option>
+              <option value="miles">miles</option>
+            </input>
+          </cell>
+        </row>
+        <input type="submit" value="Find!"/>
+      </FORM>
+      <POIVIEW detailpage="index.xml">
+        <headline anchor="result">POI Item</headline>
+        <poidetail itemid=""></poidetail>
+        <errors>
+        <error code="404">Nicht gefunden</error>
+        </errors>
+      </POIVIEW>
+      <MAP mapmode="poi">
+        <styles>
+          <style name="text-align" value="center"/>
+          <style name="padding" value="5"/>
+        </styles>
+        <mapparams provider="google">
+          <key>your_google_api_key</key>
+          <maptype></maptype>
+          <zoom>14</zoom>
+          <width>99</width>
+          <height>50</height>
+        </mapparams>
+        <mapnavigation position="bottom"/>
+      </MAP>
+      <POIVIEW detailpage="index2.xml">
+        <headline>POI Results</headline>
+        <poilisting conditional="false" listid="" distance="10" unit="km" maxitems="50">
+          <address3/>
+          <phone label="Phone:"/>
+          <distance label="Distance:"/>
+          <maplink target="poimap.xml" label="&#187; Show Map"/>
+        </poilisting>
+        <errors>
+	        <error code="400">[i]Sorry, no results found[/i]</error>
+	        <error code="602">[i]Google API Error[/i]</error>
+	        <error code="900">[i]Not authorized[/i]</error>
+        </errors>
+      </POIVIEW>
+      <LIST borders="top">
+        <items>
+          <item href="index.xml">&#187; see standard version</item>
+          <item href="poialternate.zip">&#187; download alternate version (ZIP)</item>
+        </items>
+      </LIST>
+      <SEPARATOR/>
+      <PAGEFOOTER>
+        <styles>
+          <style name="link-color" value="#FFFFFF"/>
+          <style name="bgcolor" value="#D90000"/>
+        </styles>
+        <text href="http://netbiscuits.mobi">powered by Netbiscuits</text>
+      </PAGEFOOTER>
+    </column>
+  </container>
+</page>

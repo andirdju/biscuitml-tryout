@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page title="Netbiscuits"> 
+
+   <container>
+	     <column>
+		       <IMAGEHEADER fillcolor="D90000" boxing="3">
+            <styles>
+				           <style name="bgcolor" value="#D90000"/>
+			         </styles>
+            <img src="./res/generic-header-image.jpg" href="index.xml" alt="home"/>
+         </IMAGEHEADER>
+	     </column>
+   </container>
+
+   <container>
+	     <column>
+		       <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+	     </column>
+   </container>
+
+   <container>
+	     <column>
+		       <ARTICLE>
+            <richtext>Text 1: [b]Your call to action[/b]! Ask the customer to enter his cell phone number below. </richtext>
+         </ARTICLE>
+		       <SEPARATOR/>
+		       <FORM action="clickto" method="POST">
+            <row>
+				           <cell align="left">
+					             <input type="text" name="nbFormCellNumber" maxlength="25" size="30" align="left"/>
+				           </cell>
+			         </row>
+            <row>
+				           <cell align="left">
+					             <input type="hidden" name="nbAction" value="ClickToSMS sample"/>
+				           </cell>
+				           <cell align="right">
+					             <input type="hidden" name="nbFormTest1" value="sms-landing-sample"/>
+				           </cell>
+			         </row>
+            <row>
+				           <cell align="left">
+					             <input type="hidden" name="successPage"
+                         value="sent.xml"/>
+				           </cell>
+				           <cell align="right">
+					             <input type="hidden" name="errorPage"
+                         value="notsent.xml"/>
+				           </cell>
+			         </row>
+            <row>
+				           <cell align="left">
+					             <input type="submit" value="Submit" align="left"/>
+				           </cell>
+				           <cell align="right">
+					             <input type="hidden" name="recipient" value="email@somewhere.com"/>
+				           </cell>
+			         </row>
+         </FORM>
+		       <ARTICLE>
+            <richtext>Further down, add additional info that the advertiser wants to
+				communicate.</richtext>
+         </ARTICLE>
+	     </column>
+   </container>
+
+
+   <container>
+	     <column>
+		       <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+	     </column>
+   </container>
+
+   <container>
+	     <column>
+		       <PAGEFOOTER>
+            <item position="2">
+				           <richtext>[b]copyright info[/b]</richtext>			
+			         </item>
+         </PAGEFOOTER>
+	     </column>
+   </container>
+
+</page>

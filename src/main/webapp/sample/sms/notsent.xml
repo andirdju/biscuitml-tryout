@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page xmlns:nb="http://www.emoveo.de/netbiscuits" title="Netbiscuits">
+	
+	  <container>
+		    <column>
+			      <IMAGEHEADER fillcolor="D90000" boxing="3">
+            <styles>
+					          <style name="bgcolor" value="#D90000"/>
+				        </styles>
+            <img src="./res/generic-header-image.jpg" href="index.xml" alt="home"/>
+         </IMAGEHEADER>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <ARTICLE>
+            <headline>We're Sorry!</headline>
+            <richtext>[br]Error Message: If the submission failed, please apologize, and ask the customer to try again.</richtext>
+            <link href="landing-page-sms.xml">...go back</link>
+         </ARTICLE>
+			      <SEPARATOR/>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <SEPARATOR>
+            <hr/>
+         </SEPARATOR>
+		    </column>
+	  </container>
+	
+	  <container>
+		    <column>
+			      <PAGEFOOTER>
+            <item position="2">
+					          <richtext>[b]copyright info[/b]</richtext>
+				        </item>
+         </PAGEFOOTER>
+		    </column>
+	  </container>
+	
+</page>
